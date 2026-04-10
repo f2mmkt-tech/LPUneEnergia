@@ -77,7 +77,7 @@ export function Footer() {
 
           {/* MIDDLE */}
           <div className="text-center space-y-5">
-            <h4 className="text-sm font-semibold text-white/70 uppercase tracking-widest">
+            <h4 className="text-sm font-semibold text-white/70 uppercase tracking-widest mb-12 mt-8">
               Navegação
             </h4>
 
@@ -105,7 +105,7 @@ export function Footer() {
           {/* RIGHT */}
           <div className="text-center md:text-right space-y-5">
 
-            <h4 className="text-sm font-semibold text-white/70 uppercase tracking-widest">
+            <h4 className="text-sm font-semibold text-white/70 uppercase tracking-widest mb-12 mt-8">
               Contato
             </h4>
 
