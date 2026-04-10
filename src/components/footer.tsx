@@ -54,23 +54,25 @@ export function Footer() {
             </p>
 
             {/* SOCIALS */}
-            <div className="flex gap-3 justify-center md:justify-start">
-              {[
-                { icon: "fa-instagram", link: "https://www.instagram.com/uneenergias/" },
-                { icon: "fa-linkedin-in", link: "#" },
-                { icon: "fa-facebook-f", link: "#" },
-              ].map((item, i) => (
-                <motion.a
-                  key={i}
-                  href={item.link}
-                  target="_blank"
-                  whileHover={{ y: -3 }}
-                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 border border-white/10 hover:bg-[#6EDC5F] hover:text-[#0B3D2E] transition"
-                >
-                  <i className={`fab ${item.icon}`} />
-                </motion.a>
-              ))}
-            </div>
+          <div className="flex justify-center md:justify-start">
+            <motion.a
+              href="https://www.instagram.com/uneenergias/"
+              target="_blank"
+              whileHover={{ y: -3, scale: 1.05 }}
+              className="flex items-center gap-3 px-4 py-2 rounded-xl 
+              bg-white/10 border border-white/10 
+              hover:bg-gradient-to-r hover:from-[#6EDC5F] hover:to-[#FFC72C] 
+              hover:text-[#0B3D2E] transition"
+            >
+              <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/20">
+                <i className="fab fa-instagram text-sm" />
+              </div>
+
+              <span className="text-sm font-medium">
+                Siga no Instagram
+              </span>
+            </motion.a>
+          </div>
           </div>
 
           {/* MIDDLE */}
