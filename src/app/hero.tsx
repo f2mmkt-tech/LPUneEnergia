@@ -184,7 +184,7 @@ useEffect(() => {
           {/* Trust */}
           <motion.div
             variants={item}
-            className="mt-8 flex flex-wrap gap-4 text-sm text-gray-300"
+            className="mt-8 flex flex-wrap gap-4 text-sm text-gray-300 mb-8"
           >
             <span>⚡ Ativação rápida</span>
             <span>🌱 Energia limpa</span>
@@ -206,7 +206,7 @@ useEffect(() => {
             transition={{ duration: 4, repeat: Infinity }}
           />
 
-          <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
+          <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl mb-8">
 
             {/* Header */}
             <div className="mb-6">
