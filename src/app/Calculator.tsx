@@ -4,24 +4,57 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
+const GRUPOS_DESCONTO = [
+  {
+    grupo: 1,
+    desconto: 0.25,
+    label: "25% de desconto",
+    estados: [
+      { uf: "MG", nome: "Minas Gerais" },
+      { uf: "MS", nome: "Mato Grosso do Sul" },
+    ],
+  },
+  {
+    grupo: 2,
+    desconto: 0.2,
+    label: "20% de desconto",
+    estados: [
+      { uf: "BA", nome: "Bahia" },
+      { uf: "CE", nome: "Ceará" },
+      { uf: "GO", nome: "Goiás" },
+      { uf: "PE", nome: "Pernambuco" },
+      { uf: "RN", nome: "Rio Grande do Norte" },
+    ],
+  },
+  {
+    grupo: 3,
+    desconto: 0.15,
+    label: "15% de desconto",
+    estados: [
+      { uf: "PR", nome: "Paraná" },
+      { uf: "SP", nome: "São Paulo" },
+    ],
+  },
+];
+
+function getDiscountRate(uf: string): number | null {
+  for (const grupo of GRUPOS_DESCONTO) {
+    if (grupo.estados.some((e) => e.uf === uf)) return grupo.desconto;
+  }
+  return null;
+}
+
 export default function EconomiaCalculator() {
   const [value, setValue] = useState(500);
   const [months, setMonths] = useState(12);
+  const [estadoSelecionado, setEstadoSelecionado] = useState("");
 
-  // 20% discount
-  const discountRate = 0.2;
+  const taxaDesconto = getDiscountRate(estadoSelecionado);
+  const calculadoraAtiva = taxaDesconto !== null;
 
-  // Monthly discounted bill
-  const discountedMonthly = value * (1 - discountRate);
-
-  // Total cost with UNE over selected months
-  const totalWithDiscount = discountedMonthly * months;
-
-  // Total cost without UNE
-  const totalWithoutDiscount = value * months;
-
-  // Savings
-  const totalSavings = totalWithoutDiscount - totalWithDiscount;
+  const discountedMonthly = calculadoraAtiva ? value * (1 - taxaDesconto) : null;
+  const totalSavings = calculadoraAtiva ? value * taxaDesconto * months : null;
+  const percentualDesconto = taxaDesconto !== null ? Math.round(taxaDesconto * 100) : null;
 
   return (
     <section className="relative py-10 sm:py-12 bg-gradient-to-b from-[#0B3D2E] to-[#07281F] text-white overflow-hidden">
@@ -46,6 +79,46 @@ export default function EconomiaCalculator() {
         <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-7 shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
           {/* TOP */}
           <div className="flex flex-col gap-4 mb-6">
+            {/* STATE SELECTOR */}
+            <div className="flex flex-col gap-1.5">
+              <label className="text-white/60 text-xs sm:text-sm">
+                Seu estado
+              </label>
+              <div className="relative">
+                <select
+                  value={estadoSelecionado}
+                  onChange={(e) => setEstadoSelecionado(e.target.value)}
+                  className="w-full bg-white/10 border border-white/20 text-white text-sm rounded-lg px-3 py-2.5 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6EDC5F]/50 transition"
+                >
+                  <option value="" disabled className="bg-[#0B3D2E] text-white/50">
+                    Selecione seu estado
+                  </option>
+                  {GRUPOS_DESCONTO.map((grupo) => (
+                    <optgroup
+                      key={grupo.grupo}
+                      label={grupo.label}
+                      className="bg-[#0B3D2E]"
+                    >
+                      {grupo.estados.map((estado) => (
+                        <option
+                          key={estado.uf}
+                          value={estado.uf}
+                          className="bg-[#0B3D2E] text-white"
+                        >
+                          {estado.nome} ({estado.uf})
+                        </option>
+                      ))}
+                    </optgroup>
+                  ))}
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/40">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
             {/* LABEL + VALUE */}
             <div className="flex items-center justify-between">
               <p className="text-white/60 text-xs sm:text-sm">Sua conta atual</p>
@@ -115,32 +188,41 @@ export default function EconomiaCalculator() {
               Economia estimada no período
             </p>
 
-            <motion.div
-              key={totalSavings}
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] bg-clip-text text-transparent"
-            >
-                      <CountUp
-                  end={totalSavings}
-                  duration={1.2}
-                  decimals={2}
-                  decimal=","
-                  separator="."
-                  prefix="R$ "
-                />
-            </motion.div>
+            {calculadoraAtiva ? (
+              <>
+                <motion.div
+                  key={totalSavings}
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  className="text-3xl sm:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] bg-clip-text text-transparent"
+                >
+                  <CountUp
+                    end={totalSavings!}
+                    duration={1.2}
+                    decimals={2}
+                    decimal=","
+                    separator="."
+                    prefix="R$ "
+                  />
+                </motion.div>
 
-            {/* Monthly discounted value */}
-            <p className="text-white/60 text-xs sm:text-sm mt-3">
-              Valor mensal da conta, com desconto de 20%:{" "}
-              <span className="text-[#6EDC5F] font-semibold">
-                R${" "}
-                {discountedMonthly.toLocaleString("pt-BR", {
-                  minimumFractionDigits: 2,
-                })}
-              </span>
-            </p>
+                <p className="text-white/60 text-xs sm:text-sm mt-3">
+                  Valor mensal da conta, com desconto de {percentualDesconto}%:{" "}
+                  <span className="text-[#6EDC5F] font-semibold">
+                    R${" "}
+                    {discountedMonthly!.toLocaleString("pt-BR", {
+                      minimumFractionDigits: 2,
+                    })}
+                  </span>
+                </p>
+              </>
+            ) : (
+              <div className="py-4">
+                <p className="text-white/40 text-sm">
+                  Selecione seu estado para ver a economia estimada
+                </p>
+              </div>
+            )}
 
             <p className="text-[10px] sm:text-xs text-white/40 mt-2">
               *Estimativa baseada no seu consumo médio
