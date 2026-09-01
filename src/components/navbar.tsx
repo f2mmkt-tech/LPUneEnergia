@@ -62,6 +62,16 @@ export  function Navbar() {
   ))}
 </div>
 
+          {/* Portal CTA */}
+          <a
+            href="https://portal.energiaune.com.br/auth/login"
+            target="_blank"
+            className={`px-5 py-2 rounded-full border font-semibold transition hover:scale-105
+              ${scrolled ? "border-[#0B3D2E] text-[#0B3D2E] hover:bg-[#0B3D2E]/10" : "border-white/60 text-white hover:bg-white/10"}`}
+          >
+            Acessar portal
+          </a>
+
           {/* CTA */}
           <a
             href="https://wa.me/553187954089"
@@ -100,9 +110,17 @@ export  function Navbar() {
           ))}
 
           <a
+            href="https://portal.energiaune.com.br/auth/login"
+            target="_blank"
+            className="block text-center mt-3 px-4 py-2 rounded-full border border-white/60 text-white font-semibold"
+          >
+            Acessar portal
+          </a>
+
+          <a
             href="https://wa.me/553187954089"
             target="_blank"
-            className="block text-center mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold"
+            className="block text-center mt-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold"
           >
             Simular economia
           </a>
