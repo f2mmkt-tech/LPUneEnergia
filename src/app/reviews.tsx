@@ -114,7 +114,7 @@ export default function ReviewsSection() {
         {/* CTA */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
           <a
-            href="https://wa.me/5538991197271"
+            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
             target="_blank"
             className="px-6 py-3 rounded-xl border border-white/20 hover:border-white/40 hover:bg-white/5 transition"
           >
@@ -122,7 +122,8 @@ export default function ReviewsSection() {
           </a>
 
           <a
-            href="#"
+            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
+            target="_blank"
             className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold shadow hover:scale-105 transition"
           >
             Quero economizar!

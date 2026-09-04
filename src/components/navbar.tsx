@@ -12,15 +12,36 @@ const navItems = [
   { label: "Ajuda", href: "#questions" },
 ];
 
-export  function Navbar() {
+const WA_URL =
+  "https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais.";
+
+export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isLightSection, setIsLightSection] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+
+      const lightSection = document.getElementById("comofunciona");
+      if (lightSection) {
+        const rect = lightSection.getBoundingClientRect();
+        // Navbar bottom sits around 70px from viewport top
+        setIsLightSection(rect.top <= 70 && rect.bottom > 70);
+      }
+    };
+
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const textColor = isLightSection ? "text-[#0B3D2E]" : "text-white/80";
+  const portalBorder = isLightSection
+    ? "border-[#0B3D2E] text-[#0B3D2E] hover:bg-[#0B3D2E]/10"
+    : "border-white/60 text-white hover:bg-white/10";
+  const mobileIconColor = isLightSection ? "text-[#0B3D2E]" : "text-white";
 
   return (
     <div
@@ -46,35 +67,30 @@ export  function Navbar() {
           />
         </Link>
 
-        {/* DESKTOP */}
-        <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
-
-      <div className={`hidden lg:flex items-center gap-8 text-sm font-medium
-  ${scrolled ? "text-black" : "text-white/80"}`}>
-  {navItems.map((item) => (
-    <a
-      key={item.label}
-      href={item.href}
-      className={`transition hover:text-black/80 ${scrolled ? "text-black" : "text-white/80"}`}
-    >
-      {item.label}
-    </a>
-  ))}
-</div>
+        {/* DESKTOP NAV */}
+        <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className={`transition hover:opacity-70 ${textColor}`}
+            >
+              {item.label}
+            </a>
+          ))}
 
           {/* Portal CTA */}
           <a
             href="https://portal.energiaune.com.br/auth/login"
             target="_blank"
-            className={`px-5 py-2 rounded-full border font-semibold transition hover:scale-105
-              ${scrolled ? "border-[#0B3D2E] text-[#0B3D2E] hover:bg-[#0B3D2E]/10" : "border-white/60 text-white hover:bg-white/10"}`}
+            className={`px-5 py-2 rounded-full border font-semibold transition hover:scale-105 ${portalBorder}`}
           >
             Acessar portal
           </a>
 
-          {/* CTA */}
+          {/* WhatsApp CTA */}
           <a
-            href="https://wa.me/553187954089"
+            href={WA_URL}
             target="_blank"
             className="ml-2 px-5 py-2 rounded-full bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold shadow-md hover:scale-105 transition"
           >
@@ -85,7 +101,7 @@ export  function Navbar() {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-white"
+          className={`lg:hidden ${mobileIconColor}`}
         >
           {open ? (
             <XMarkIcon className="h-5 w-5" />
@@ -98,7 +114,6 @@ export  function Navbar() {
       {/* MOBILE MENU */}
       {open && (
         <div className="lg:hidden px-4 pb-4 pt-2 space-y-3 bg-white/10 backdrop-blur-xl border-t border-white/10 rounded-b-2xl">
-
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -118,7 +133,7 @@ export  function Navbar() {
           </a>
 
           <a
-            href="https://wa.me/553187954089"
+            href={WA_URL}
             target="_blank"
             className="block text-center mt-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold"
           >

@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           <a
-            href="https://wa.me/5538991197271"
+            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
             target="_blank"
             className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold shadow-lg hover:scale-105 transition"
           >
@@ -113,11 +113,11 @@ export function Footer() {
               <p>contato@uneenergia.com.br</p>
 
               <a
-                href="https://wa.me/5538991197271"
+                href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
                 target="_blank"
                 className="block hover:text-[#6EDC5F] transition"
               >
-                +55 (38) 99119-7271
+                +55 (81) 98662-8115
               </a>
             </div>
 
