@@ -60,9 +60,9 @@ export function Navbar() {
           <Image
             src="/logos/orlink-logo.png"
             alt="OR-LINK"
-            width={110}
-            height={30}
-            className="w-[130px] sm:w-[160px] h-auto mix-blend-screen -my-6"
+            width={1230}
+            height={283}
+            className="w-[120px] sm:w-[150px] h-auto"
             priority
           />
         </Link>

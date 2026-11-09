@@ -44,9 +44,9 @@ export function Footer() {
             <Image
               src="/logos/orlink-logo.png"
               alt="OR-LINK"
-              width={260}
-              height={130}
-              className="mx-auto md:mx-0 mix-blend-screen"
+              width={1230}
+              height={283}
+              className="mx-auto md:mx-0 w-[220px] h-auto"
             />
 
             <p className="text-white/60 text-sm leading-relaxed max-w-sm mx-auto md:mx-0">
