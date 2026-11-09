@@ -5,20 +5,20 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "Como a UNE ganha dinheiro?",
-    answer: `Com a UNE, você faz parte de um grupo que compartilha energia solar de forma inteligente. Funciona assim: você e outros consumidores dividem os custos da usina, e a UNE cuida de toda a parte chata, como a burocracia dos créditos, faturas e atendimento. 
+    question: "Como a OR-LINK ganha dinheiro?",
+    answer: `Com a OR-LINK, você faz parte de um grupo que compartilha energia solar de forma inteligente. Funciona assim: você e outros consumidores dividem os custos da usina, e a OR-LINK cuida de toda a parte chata, como a burocracia dos créditos, faturas e atendimento. 
 
-Por esse serviço de gestão, a UNE é remunerada pelo consórcio. No fim das contas, você paga só a sua parte na divisão e garante um desconto direto no seu boleto de energia.`,
+Por esse serviço de gestão, a OR-LINK é remunerada pelo consórcio. No fim das contas, você paga só a sua parte na divisão e garante um desconto direto no seu boleto de energia.`,
   },
   {
     question: "Como fica a minha conta de luz?",
-    answer: `Ao escolher a UNE, você reduz imediatamente seu gasto total com eletricidade. O pagamento mensal é dividido em duas partes: a sua cota de participação na usina de energia limpa, paga à UNE, e os impostos e tarifas obrigatórios, pagos à distribuidora local. 
+    answer: `Ao escolher a OR-LINK, você reduz imediatamente seu gasto total com eletricidade. O pagamento mensal é dividido em duas partes: a sua cota de participação na usina de energia limpa, paga à OR-LINK, e os impostos e tarifas obrigatórios, pagos à distribuidora local. 
 
 Como a energia produzida por nossas usinas parceiras é mais barata que a convencional, o resultado final é uma economia de até 25% no seu orçamento.`,
   },
   {
-    question: "Imóvel alugado pode ser UNE?",
-    answer: `Sem problemas! A única regra é que a conta de energia precisa estar no mesmo CPF ou CNPJ de quem assina com a UNE. 
+    question: "Imóvel alugado pode ser OR-LINK?",
+    answer: `Sem problemas! A única regra é que a conta de energia precisa estar no mesmo CPF ou CNPJ de quem assina com a OR-LINK. 
 
 Se não estiver, a gente te explica o passo a passo para ajustar isso direto com a sua distribuidora. É um processo bem ágil.`,
   },
@@ -32,12 +32,12 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="relative py-24 px-6 bg-[#061A14] overflow-hidden">
+    <section className="relative py-24 px-6 bg-[#0A0A0A] overflow-hidden">
 
       {/* 🌟 BACKGROUND GLOW */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-[-100px] left-[-80px] w-[260px] h-[260px] bg-[#6EDC5F]/20 blur-3xl rounded-full" />
-        <div className="absolute bottom-[-100px] right-[-80px] w-[260px] h-[260px] bg-[#FFC72C]/20 blur-3xl rounded-full" />
+        <div className="absolute top-[-100px] left-[-80px] w-[260px] h-[260px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
+        <div className="absolute bottom-[-100px] right-[-80px] w-[260px] h-[260px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
       </div>
 
       <div className="max-w-4xl mx-auto">
@@ -46,13 +46,13 @@ export default function FAQSection() {
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-semibold text-white">
             Perguntas{" "}
-            <span className="bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] bg-clip-text text-transparent">
               frequentes
             </span>
           </h2>
 
           <p className="text-white/60 mt-4 text-lg">
-            Entenda como funciona a UNE e como você começa a economizar
+            Entenda como funciona a OR-LINK e como você começa a economizar
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export default function FAQSection() {
                   <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="text-[#6EDC5F]"
+                    className="text-[#C9A46B]"
                   >
                     ▼
                   </motion.div>
@@ -111,9 +111,9 @@ export default function FAQSection() {
           </p>
 
           <a
-            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
+            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
             target="_blank"
-            className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold shadow-lg hover:scale-105 transition"
+            className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-[#2E2E2E] font-semibold shadow-lg hover:scale-105 transition"
           >
             Falar com especialista
           </a>

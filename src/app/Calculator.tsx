@@ -57,11 +57,11 @@ export default function EconomiaCalculator() {
   const percentualDesconto = taxaDesconto !== null ? Math.round(taxaDesconto * 100) : null;
 
   return (
-    <section className="relative py-10 sm:py-12 bg-gradient-to-b from-[#0B3D2E] to-[#07281F] text-white overflow-hidden">
+    <section className="relative py-10 sm:py-12 bg-gradient-to-b from-[#2E2E2E] to-[#0A0A0A] text-white overflow-hidden">
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-[-120px] left-[-100px] w-[260px] h-[260px] bg-[#6EDC5F]/20 blur-3xl rounded-full" />
-        <div className="absolute bottom-[-120px] right-[-100px] w-[260px] h-[260px] bg-[#FFC72C]/20 blur-3xl rounded-full" />
+        <div className="absolute top-[-120px] left-[-100px] w-[260px] h-[260px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
+        <div className="absolute bottom-[-120px] right-[-100px] w-[260px] h-[260px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -88,22 +88,22 @@ export default function EconomiaCalculator() {
                 <select
                   value={estadoSelecionado}
                   onChange={(e) => setEstadoSelecionado(e.target.value)}
-                  className="w-full bg-white/10 border border-white/20 text-white text-sm rounded-lg px-3 py-2.5 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6EDC5F]/50 transition"
+                  className="w-full bg-white/10 border border-white/20 text-white text-sm rounded-lg px-3 py-2.5 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C9A46B]/50 transition"
                 >
-                  <option value="" disabled className="bg-[#0B3D2E] text-white/50">
+                  <option value="" disabled className="bg-[#2E2E2E] text-white/50">
                     Selecione seu estado
                   </option>
                   {GRUPOS_DESCONTO.map((grupo) => (
                     <optgroup
                       key={grupo.grupo}
                       label={grupo.label}
-                      className="bg-[#0B3D2E]"
+                      className="bg-[#2E2E2E]"
                     >
                       {grupo.estados.map((estado) => (
                         <option
                           key={estado.uf}
                           value={estado.uf}
-                          className="bg-[#0B3D2E] text-white"
+                          className="bg-[#2E2E2E] text-white"
                         >
                           {estado.nome} ({estado.uf})
                         </option>
@@ -136,7 +136,7 @@ export default function EconomiaCalculator() {
                 step={50}
                 value={value}
                 onChange={(e) => setValue(Number(e.target.value))}
-                className="w-full h-[5px] sm:h-[6px] rounded-full appearance-none cursor-pointer bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C]"
+                className="w-full h-[5px] sm:h-[6px] rounded-full appearance-none cursor-pointer bg-gradient-to-r from-[#C9A46B] to-[#C9A46B]"
               />
               <div className="flex justify-between text-[10px] sm:text-xs text-white/40 mt-2">
                 <span>R$100</span>
@@ -148,7 +148,7 @@ export default function EconomiaCalculator() {
             <div className="flex items-center gap-3 my-1">
               <div className="flex-1 h-px bg-white/10" />
               <span className="text-[10px] sm:text-xs text-white/40 whitespace-nowrap">
-                Com UNE
+                Com OR-LINK
               </span>
               <div className="flex-1 h-px bg-white/10" />
             </div>
@@ -168,13 +168,13 @@ export default function EconomiaCalculator() {
                     className={`relative w-full py-2 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300
                       ${
                         active
-                          ? "bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] shadow-md"
+                          ? "bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-[#2E2E2E] shadow-md"
                           : "bg-white/10 text-white/70 hover:bg-white/20"
                       }`}
                   >
                     {option.label}
                     {active && (
-                      <span className="absolute inset-0 rounded-lg blur-md opacity-30 bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] -z-10" />
+                      <span className="absolute inset-0 rounded-lg blur-md opacity-30 bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] -z-10" />
                     )}
                   </button>
                 );
@@ -194,7 +194,7 @@ export default function EconomiaCalculator() {
                   key={totalSavings}
                   initial={{ scale: 0.95, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="text-3xl sm:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] bg-clip-text text-transparent"
+                  className="text-3xl sm:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] bg-clip-text text-transparent"
                 >
                   <CountUp
                     end={totalSavings!}
@@ -208,7 +208,7 @@ export default function EconomiaCalculator() {
 
                 <p className="text-white/60 text-xs sm:text-sm mt-3">
                   Valor mensal da conta, com desconto de {percentualDesconto}%:{" "}
-                  <span className="text-[#6EDC5F] font-semibold">
+                  <span className="text-[#C9A46B] font-semibold">
                     R${" "}
                     {discountedMonthly!.toLocaleString("pt-BR", {
                       minimumFractionDigits: 2,
@@ -239,10 +239,10 @@ export default function EconomiaCalculator() {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center mt-6">
-            <button className="px-4 py-2 rounded-lg bg-white text-[#0B3D2E] text-sm font-medium shadow hover:scale-105 transition">
+            <button className="px-4 py-2 rounded-lg bg-white text-[#2E2E2E] text-sm font-medium shadow hover:scale-105 transition">
               Falar com especialista
             </button>
-            <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] text-sm font-semibold shadow-md hover:scale-105 transition">
+            <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-[#2E2E2E] text-sm font-semibold shadow-md hover:scale-105 transition">
               Quero o desconto!
             </button>
           </div>

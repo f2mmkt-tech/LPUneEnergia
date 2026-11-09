@@ -33,11 +33,11 @@ export async function POST(req) {
     });
 
     const htmlContent = `
-      <div style="font-family:Arial;padding:30px;background:#eef6f7;">
+      <div style="font-family:Arial;padding:30px;background:#F5EEE2;">
         <div style="max-width:600px;margin:auto;background:#fff;padding:25px;border-radius:12px;">
           
-          <h2 style="color:#58A8AB;text-align:center;">
-            Novo Lead Parceiro UNE
+          <h2 style="color:#C9A46B;text-align:center;">
+            Novo Lead Parceiro OR-LINK
           </h2>
 
           <table style="width:100%;margin-top:20px;border-collapse:collapse;">
@@ -49,14 +49,14 @@ export async function POST(req) {
           </table>
 
           <p style="margin-top:20px;font-size:12px;color:#777;text-align:center;">
-            Lead enviado pelo site UNE
+            Lead enviado pelo site OR-LINK
           </p>
         </div>
       </div>
     `;
 
     await transporter.sendMail({
-      from: `"Website UNE" <${process.env.EMAIL_USER}>`,
+      from: `"Website OR-LINK" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject: `Novo parceiro — ${formatted.nome}`,
       html: htmlContent,
@@ -75,7 +75,7 @@ export async function POST(req) {
 
 function row(label, value, accent = false) {
   return `
-    <tr style="background:${accent ? "#e6f7f8" : "#fff"};">
+    <tr style="background:${accent ? "#F5EEE2" : "#fff"};">
       <td style="padding:10px;border:1px solid #ddd;font-weight:bold;">
         ${label}
       </td>

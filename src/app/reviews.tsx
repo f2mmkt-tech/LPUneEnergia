@@ -37,11 +37,11 @@ export default function ReviewsSection() {
     url.includes("vimeo") || url.includes("youtube");
 
   return (
-    <section className="relative py-20 bg-[#0B3D2E] text-white overflow-hidden">
+    <section className="relative py-20 bg-[#2E2E2E] text-white overflow-hidden">
       
       {/* 🌌 Glow */}
-      <div className="absolute top-[-120px] left-[-120px] w-[300px] h-[300px] bg-[#6EDC5F]/20 blur-3xl rounded-full" />
-      <div className="absolute bottom-[-120px] right-[-120px] w-[300px] h-[300px] bg-[#FFC72C]/20 blur-3xl rounded-full" />
+      <div className="absolute top-[-120px] left-[-120px] w-[300px] h-[300px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
+      <div className="absolute bottom-[-120px] right-[-120px] w-[300px] h-[300px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
 
       <div className="relative max-w-7xl mx-auto px-6">
 
@@ -49,8 +49,8 @@ export default function ReviewsSection() {
         <div className="text-center mb-14">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
             Vários clientes{" "}
-            <span className="text-[#6EDC5F]">já estão economizando</span>{" "}
-            com a UNE
+            <span className="text-[#C9A46B]">já estão economizando</span>{" "}
+            com a OR-LINK
           </h2>
         </div>
 
@@ -105,7 +105,7 @@ export default function ReviewsSection() {
               </div>
 
               {/* BORDER */}
-              <div className="absolute inset-0 border border-white/10 group-hover:border-[#6EDC5F]/40 transition rounded-2xl" />
+              <div className="absolute inset-0 border border-white/10 group-hover:border-[#C9A46B]/40 transition rounded-2xl" />
             </motion.div>
           ))}
 
@@ -114,7 +114,7 @@ export default function ReviewsSection() {
         {/* CTA */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
           <a
-            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
+            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
             target="_blank"
             className="px-6 py-3 rounded-xl border border-white/20 hover:border-white/40 hover:bg-white/5 transition"
           >
@@ -122,9 +122,9 @@ export default function ReviewsSection() {
           </a>
 
           <a
-            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
+            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
             target="_blank"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold shadow hover:scale-105 transition"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-[#2E2E2E] font-semibold shadow hover:scale-105 transition"
           >
             Quero economizar!
           </a>

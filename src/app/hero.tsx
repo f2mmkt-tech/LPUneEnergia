@@ -65,21 +65,21 @@ useEffect(() => {
 }, []);
 
   return (
-    <section className="relative w-full min-h-[100vh] flex items-center justify-center bg-[#0B3D2E] text-white overflow-hidden pt-28 lg:pt-28">
+    <section className="relative w-full min-h-[100vh] flex items-center justify-center bg-[#2E2E2E] text-white overflow-hidden pt-28 lg:pt-28">
       
       {/* 🌌 Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0B3D2E] via-[#0f4d3a] to-[#07281f]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2E2E2E] via-[#2E2E2E] to-[#0A0A0A]" />
 
       {/* Glow Orbs */}
       <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{ duration: 6, repeat: Infinity }}
-        className="absolute top-[-120px] right-[-120px] w-[350px] h-[350px] bg-[#6EDC5F] opacity-20 blur-3xl rounded-full"
+        className="absolute top-[-120px] right-[-120px] w-[350px] h-[350px] bg-[#C9A46B] opacity-20 blur-3xl rounded-full"
       />
       <motion.div
         animate={{ y: [0, 20, 0] }}
         transition={{ duration: 7, repeat: Infinity }}
-        className="absolute bottom-[-120px] left-[-120px] w-[350px] h-[350px] bg-[#FFC72C] opacity-20 blur-3xl rounded-full"
+        className="absolute bottom-[-120px] left-[-120px] w-[350px] h-[350px] bg-[#C9A46B] opacity-20 blur-3xl rounded-full"
       />
 
       {/* ✨ Particles */}
@@ -111,7 +111,7 @@ useEffect(() => {
           {/* Badge */}
           <motion.div
             variants={item}
-            className="inline-flex items-center gap-2 bg-[#6EDC5F]/10 border border-[#6EDC5F]/30 text-[#6EDC5F] px-4 py-1 rounded-full text-sm mb-6"
+            className="inline-flex items-center gap-2 bg-[#C9A46B]/10 border border-[#C9A46B]/30 text-[#C9A46B] px-4 py-1 rounded-full text-sm mb-6"
           >
             ⚡ Energia solar 100% digital
           </motion.div>
@@ -122,7 +122,7 @@ useEffect(() => {
             className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6"
           >
             Pare de pagar caro na luz{" "}
-            <span className="text-[#FFC72C]">
+            <span className="text-[#C9A46B]">
               Economize até 25%
             </span>{" "}
             todos os meses ⚡
@@ -144,11 +144,11 @@ useEffect(() => {
           >
             <motion.div whileHover="hover" whileTap="tap">
               <Link
-                href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
+                href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
                 target="_blank"
                 className="relative overflow-hidden flex items-center justify-center gap-2 px-7 py-3 rounded-xl 
-                bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] 
-                text-[#0B3D2E] font-bold text-lg shadow-xl"
+                bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] 
+                text-[#2E2E2E] font-bold text-lg shadow-xl"
               >
                 {/* Shine effect */}
                 <motion.span
@@ -201,7 +201,7 @@ useEffect(() => {
         >
           {/* Glow */}
           <motion.div
-            className="absolute inset-0 rounded-3xl bg-[#6EDC5F]/10 blur-2xl"
+            className="absolute inset-0 rounded-3xl bg-[#C9A46B]/10 blur-2xl"
             animate={{ opacity: [0.2, 0.4, 0.2] }}
             transition={{ duration: 4, repeat: Infinity }}
           />
@@ -223,9 +223,9 @@ useEffect(() => {
                   </p>
               </div>
 
-              <div className="bg-[#6EDC5F]/10 border border-[#6EDC5F]/30 rounded-lg p-4">
-                <p className="text-sm text-gray-300">Com UneEnergia</p>
-                <p className="text-2xl font-bold text-[#6EDC5F]">
+              <div className="bg-[#C9A46B]/10 border border-[#C9A46B]/30 rounded-lg p-4">
+                <p className="text-sm text-gray-300">Com OR-LINK</p>
+                <p className="text-2xl font-bold text-[#C9A46B]">
                           R$ {price}
                         </p>
               </div>
@@ -233,7 +233,7 @@ useEffect(() => {
 
             {/* Savings */}
             <div className="text-center mt-6">
-              <span className="text-[#FFC72C] font-bold text-xl">
+              <span className="text-[#C9A46B] font-bold text-xl">
                 Economize R$ 80/mês ⚡
               </span>
             </div>
@@ -243,7 +243,7 @@ useEffect(() => {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
-            className="absolute -top-5 -right-5 bg-[#FFC72C] text-[#0B3D2E] px-5 py-2 rounded-full text-sm font-bold shadow-lg"
+            className="absolute -top-5 -right-5 bg-[#C9A46B] text-[#2E2E2E] px-5 py-2 rounded-full text-sm font-bold shadow-lg"
           >
             -25%
           </motion.div>

@@ -13,7 +13,7 @@ const navItems = [
 ];
 
 const WA_URL =
-  "https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais.";
+  "https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais.";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -37,11 +37,11 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const textColor = isLightSection ? "text-[#0B3D2E]" : "text-white/80";
+  const textColor = isLightSection ? "text-[#2E2E2E]" : "text-white/80";
   const portalBorder = isLightSection
-    ? "border-[#0B3D2E] text-[#0B3D2E] hover:bg-[#0B3D2E]/10"
+    ? "border-[#2E2E2E] text-[#2E2E2E] hover:bg-[#2E2E2E]/10"
     : "border-white/60 text-white hover:bg-white/10";
-  const mobileIconColor = isLightSection ? "text-[#0B3D2E]" : "text-white";
+  const mobileIconColor = isLightSection ? "text-[#2E2E2E]" : "text-white";
 
   return (
     <div
@@ -58,11 +58,11 @@ export function Navbar() {
         {/* LOGO */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/logos/Logo2-bg2.png"
-            alt="UNE"
+            src="/logos/orlink-logo.png"
+            alt="OR-LINK"
             width={110}
             height={30}
-            className="w-[90px] sm:w-[105px] h-auto"
+            className="w-[130px] sm:w-[160px] h-auto mix-blend-screen -my-6"
             priority
           />
         </Link>
@@ -81,7 +81,7 @@ export function Navbar() {
 
           {/* Portal CTA */}
           <a
-            href="https://portal.energiaune.com.br/auth/login"
+            href="https://portal.orlink.com.br/"
             target="_blank"
             className={`px-5 py-2 rounded-full border font-semibold transition hover:scale-105 ${portalBorder}`}
           >
@@ -92,7 +92,7 @@ export function Navbar() {
           <a
             href={WA_URL}
             target="_blank"
-            className="ml-2 px-5 py-2 rounded-full bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold shadow-md hover:scale-105 transition"
+            className="ml-2 px-5 py-2 rounded-full bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-[#2E2E2E] font-semibold shadow-md hover:scale-105 transition"
           >
             Simular economia
           </a>
@@ -125,7 +125,7 @@ export function Navbar() {
           ))}
 
           <a
-            href="https://portal.energiaune.com.br/auth/login"
+            href="https://portal.orlink.com.br/"
             target="_blank"
             className="block text-center mt-3 px-4 py-2 rounded-full border border-white/60 text-white font-semibold"
           >
@@ -135,7 +135,7 @@ export function Navbar() {
           <a
             href={WA_URL}
             target="_blank"
-            className="block text-center mt-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold"
+            className="block text-center mt-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-[#2E2E2E] font-semibold"
           >
             Simular economia
           </a>

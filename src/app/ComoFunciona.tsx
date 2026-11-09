@@ -13,7 +13,7 @@ const steps = [
   {
     number: "02",
     title: "Ativação automática",
-    desc: "A UNE conecta você à energia solar sem instalação ou obras.",
+    desc: "A OR-LINK conecta você à energia solar sem instalação ou obras.",
   },
   {
     number: "03",
@@ -37,8 +37,8 @@ export default function ComoFunciona() {
 
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-[-120px] left-[-120px] w-[300px] h-[300px] bg-[#6EDC5F]/20 blur-3xl rounded-full" />
-        <div className="absolute bottom-[-120px] right-[-120px] w-[300px] h-[300px] bg-[#FFC72C]/20 blur-3xl rounded-full" />
+        <div className="absolute top-[-120px] left-[-120px] w-[300px] h-[300px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
+        <div className="absolute bottom-[-120px] right-[-120px] w-[300px] h-[300px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -48,13 +48,13 @@ export default function ComoFunciona() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl lg:text-5xl font-bold text-[#0B3D2E] mb-6"
+            className="text-4xl lg:text-5xl font-bold text-[#2E2E2E] mb-6"
           >
             Como Funciona
           </motion.h2>
 
           <p className="text-gray-600 text-lg">
-            Sem instalação, sem complicação. A UNE conecta você à energia solar
+            Sem instalação, sem complicação. A OR-LINK conecta você à energia solar
             e garante economia real todos os meses.
           </p>
         </div>
@@ -73,12 +73,12 @@ export default function ComoFunciona() {
               >
                 <div className="flex items-start gap-4">
 
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-white font-bold flex items-center justify-center shadow-md group-hover:scale-110 transition">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-white font-bold flex items-center justify-center shadow-md group-hover:scale-110 transition">
                     {step.number}
                   </div>
 
                   <div>
-                    <h3 className="text-[#0B3D2E] font-semibold text-lg mb-1">
+                    <h3 className="text-[#2E2E2E] font-semibold text-lg mb-1">
                       {step.title}
                     </h3>
                     <p className="text-gray-600 text-sm sm:text-base">
@@ -107,14 +107,14 @@ export default function ComoFunciona() {
 
         {/* SOLAR */}
         <div className="flex flex-col items-center gap-2">
-          <div className="w-16 h-16 rounded-2xl bg-[#FFF4CC] flex items-center justify-center text-2xl shadow-md">
+          <div className="w-16 h-16 rounded-2xl bg-[#F5EEE2] flex items-center justify-center text-2xl shadow-md">
             ☀️
           </div>
           <span className="text-sm text-gray-600">Usina Solar</span>
         </div>
 
         {/* LINE 1 */}
-        <div className="flex-1 h-[2px] bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] mx-4 relative overflow-hidden">
+        <div className="flex-1 h-[2px] bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] mx-4 relative overflow-hidden">
           <motion.div
             animate={{ x: ["-100%", "100%"] }}
             transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
@@ -122,20 +122,20 @@ export default function ComoFunciona() {
           />
         </div>
 
-        {/* UNE */}
+        {/* OR-LINK */}
         <motion.div
           animate={{ scale: [1, 1.08, 1] }}
           transition={{ repeat: Infinity, duration: 3 }}
           className="flex flex-col items-center gap-2"
         >
-          <div className="w-20 h-20 rounded-2xl bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] flex items-center justify-center text-white font-bold shadow-xl">
-            UNE
+          <div className="w-20 h-20 rounded-2xl bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] flex items-center justify-center text-white font-bold shadow-xl">
+            OR-LINK
           </div>
           <span className="text-sm text-gray-600">Distribuição</span>
         </motion.div>
 
         {/* LINE 2 */}
-        <div className="flex-1 h-[2px] bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] mx-4 relative overflow-hidden">
+        <div className="flex-1 h-[2px] bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] mx-4 relative overflow-hidden">
           <motion.div
             animate={{ x: ["-100%", "100%"] }}
             transition={{ repeat: Infinity, duration: 2, ease: "linear", delay: 0.5 }}
@@ -146,10 +146,10 @@ export default function ComoFunciona() {
         {/* USERS */}
         <div className="flex flex-col items-center gap-2">
           <div className="flex gap-2">
-            <div className="w-12 h-12 rounded-xl bg-[#E8F8F0] flex items-center justify-center shadow">
+            <div className="w-12 h-12 rounded-xl bg-[#F5EEE2] flex items-center justify-center shadow">
               🏠
             </div>
-            <div className="w-12 h-12 rounded-xl bg-[#E8F8F0] flex items-center justify-center shadow">
+            <div className="w-12 h-12 rounded-xl bg-[#F5EEE2] flex items-center justify-center shadow">
               🏢
             </div>
           </div>
@@ -185,7 +185,7 @@ export default function ComoFunciona() {
             <motion.div
               key={i}
               whileHover={{ y: -4 }}
-              className="px-5 py-2 rounded-full bg-white border shadow-sm text-[#0B3D2E] text-sm font-medium"
+              className="px-5 py-2 rounded-full bg-white border shadow-sm text-[#2E2E2E] text-sm font-medium"
             >
               {item}
             </motion.div>
@@ -195,11 +195,11 @@ export default function ComoFunciona() {
         {/* CTA */}
         <div className="mt-14 flex justify-center">
           <Link
-            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
+            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
             target="_blank"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl 
-            bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] 
-            text-[#0B3D2E] font-bold text-lg shadow-xl hover:scale-105 transition"
+            bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] 
+            text-[#2E2E2E] font-bold text-lg shadow-xl hover:scale-105 transition"
           >
             <i className="fa-brands fa-whatsapp text-xl" />
             Quero o desconto!

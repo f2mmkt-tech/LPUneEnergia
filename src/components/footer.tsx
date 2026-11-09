@@ -7,11 +7,11 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-[#07281F] to-[#041B14] text-white pt-20 pb-8 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-[#0A0A0A] to-[#0A0A0A] text-white pt-20 pb-8 overflow-hidden">
 
       {/* 🌌 Background glow */}
-      <div className="absolute top-[-120px] left-[-120px] w-[280px] h-[280px] bg-[#6EDC5F]/20 blur-3xl rounded-full" />
-      <div className="absolute bottom-[-120px] right-[-120px] w-[280px] h-[280px] bg-[#FFC72C]/20 blur-3xl rounded-full" />
+      <div className="absolute top-[-120px] left-[-120px] w-[280px] h-[280px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
+      <div className="absolute bottom-[-120px] right-[-120px] w-[280px] h-[280px] bg-[#C9A46B]/20 blur-3xl rounded-full" />
 
       <div className="relative max-w-6xl mx-auto px-6">
 
@@ -28,9 +28,9 @@ export function Footer() {
           </div>
 
           <a
-            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
+            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
             target="_blank"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#6EDC5F] to-[#FFC72C] text-[#0B3D2E] font-semibold shadow-lg hover:scale-105 transition"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-[#2E2E2E] font-semibold shadow-lg hover:scale-105 transition"
           >
             Simular economia
           </a>
@@ -42,11 +42,11 @@ export function Footer() {
           {/* LEFT */}
           <div className="space-y-5 text-center md:text-left">
             <Image
-              src="/logos/Logo2-bg2.png"
-              alt="UNE Energia"
-              width={150}
-              height={40}
-              className="mx-auto md:mx-0"
+              src="/logos/orlink-logo.png"
+              alt="OR-LINK"
+              width={260}
+              height={130}
+              className="mx-auto md:mx-0 mix-blend-screen"
             />
 
             <p className="text-white/60 text-sm leading-relaxed max-w-sm mx-auto md:mx-0">
@@ -61,8 +61,8 @@ export function Footer() {
               whileHover={{ y: -3, scale: 1.05 }}
               className="flex items-center gap-3 px-4 py-2 rounded-xl 
               bg-white/10 border border-white/10 
-              hover:bg-gradient-to-r hover:from-[#6EDC5F] hover:to-[#FFC72C] 
-              hover:text-[#0B3D2E] transition"
+              hover:bg-gradient-to-r hover:from-[#C9A46B] hover:to-[#C9A46B] 
+              hover:text-[#2E2E2E] transition"
             >
               <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/20">
                 <i className="fab fa-instagram text-sm" />
@@ -91,12 +91,12 @@ export function Footer() {
                 <a
                   key={i}
                   href={link.href}
-                  className="relative text-white/60 hover:text-[#6EDC5F] transition"
+                  className="relative text-white/60 hover:text-[#C9A46B] transition"
                 >
                   {link.label}
 
                   {/* underline animation */}
-                  <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#6EDC5F] transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#C9A46B] transition-all duration-300 group-hover:w-full" />
                 </a>
               ))}
             </div>
@@ -113,9 +113,9 @@ export function Footer() {
               <p>contato@uneenergia.com.br</p>
 
               <a
-                href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20Une%20e%20gostaria%20de%20saber%20mais."
+                href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
                 target="_blank"
-                className="block hover:text-[#6EDC5F] transition"
+                className="block hover:text-[#C9A46B] transition"
               >
                 +55 (81) 98662-8115
               </a>
@@ -135,13 +135,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
 
           <p>
-            © {CURRENT_YEAR} UNE Energia. Todos os direitos reservados.
+            © {CURRENT_YEAR} OR-LINK. Todos os direitos reservados.
           </p>
 
           {/* CREDIT */}
           <p className="flex items-center gap-1">
             Produzido por{" "}
-            <span className="font-semibold text-white/80 hover:text-[#6EDC5F] transition">
+            <span className="font-semibold text-white/80 hover:text-[#C9A46B] transition">
               Foco Marketing
             </span>
           </p>
