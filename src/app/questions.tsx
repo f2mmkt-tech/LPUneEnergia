@@ -111,7 +111,7 @@ export default function FAQSection() {
           </p>
 
           <a
-            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
+            href="https://wa.me/5538988330939?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
             target="_blank"
             className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-[#2E2E2E] font-semibold shadow-lg hover:scale-105 transition"
           >

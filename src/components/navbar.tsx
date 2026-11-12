@@ -13,7 +13,7 @@ const navItems = [
 ];
 
 const WA_URL =
-  "https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais.";
+  "https://wa.me/5538988330939?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais.";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);

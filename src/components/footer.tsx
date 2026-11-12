@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           <a
-            href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
+            href="https://wa.me/5538988330939?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
             target="_blank"
             className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#C9A46B] to-[#C9A46B] text-[#2E2E2E] font-semibold shadow-lg hover:scale-105 transition"
           >
@@ -56,7 +56,7 @@ export function Footer() {
             {/* SOCIALS */}
           <div className="flex justify-center md:justify-start">
             <motion.a
-              href="https://www.instagram.com/uneenergias/"
+              href="https://www.instagram.com/orlink.oficial/"
               target="_blank"
               whileHover={{ y: -3, scale: 1.05 }}
               className="flex items-center gap-3 px-4 py-2 rounded-xl 
@@ -110,14 +110,14 @@ export function Footer() {
             </h4>
 
             <div className="space-y-2 text-sm text-white/60">
-              <p>contato@uneenergia.com.br</p>
+              <p>administrativo@orlink.com.br</p>
 
               <a
-                href="https://wa.me/5581986628115?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
+                href="https://wa.me/5538988330939?text=Ol%C3%A1%2C%20vi%20no%20site%20da%20OR-LINK%20e%20gostaria%20de%20saber%20mais."
                 target="_blank"
                 className="block hover:text-[#C9A46B] transition"
               >
-                +55 (81) 98662-8115
+                +55 (38) 98833-0939
               </a>
             </div>
 
